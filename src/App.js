@@ -1,26 +1,20 @@
-import React, { useState } from 'react';
-import Header from './Layout/Header';
-import Home from './components/Home';
-import Modalapp from './components/Modalapp';
-
-
-
-
+import React, { Fragment } from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import MovieList from './componets/MovieList';
+import MyList from './componets/MyList';
 function App() {
-    
-  const [model,setModel] =useState(false)
-  const closeModel =(e)=>{
-    setModel(!model)
-  }
-  return (
-   <div className="app">
-      <Header />
-      <Home />
-      {model && <Modalapp closeModel={closeModel} text={"hey model"} />}
-        
-    
-   </div>
-  );
+   return(
+      <Fragment>
+          <BrowserRouter>
+          <Switch>
+             <Redirect exact from="/" to="/movielist" />
+             <Route exact path="/movielist"  component={MovieList} />
+             <Route exact path="/mylist"  component={MyList} />
+          </Switch>
+        </BrowserRouter> 
+      </Fragment>
+   ) 
+  
 }
 
 export default App;
