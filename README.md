@@ -6,6 +6,25 @@ In the project directory, you can run:
 
 ### `npm run start`
 
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run start`
+To start the Development server in localhost:3000
+
+### `HOOKS`
+(Functional components only)
+Completly use React-Hooks For this poject
+
+### `REDUX`
+
+ Using Redux for StateMangement 
+
+
+### `React Router `
+
+Navigation to different components.
 
 
 
